@@ -68,6 +68,33 @@ and so on. This function can be described by the formula \(f(x)= x^3\) or by the
 	\item A formula merely describes the mapping using algebra.
 	\item A plot merely describes the mapping using pictures.
 \end{itemize}
+\begin{exercise}\label{exercise1}  
+In Figure \ref{fig2} we see a plot of \(y = f ( x )\) . What is \(f(4) = \answer{2}\)  
+\end{exercise}
+\begin{wrapfigure}{r}{0.3\textwidth}
+	\centering
+		\resizebox{0.4\textwidth}{!}{
+		\begin{tikzpicture}  
+		\begin{axis}[  
+		xmin=-2,  
+		xmax=5,  
+		ymin=-2,  
+		ymax=4,  
+		axis lines=center,  
+		xlabel=$x$,  
+		ylabel=$y$,  
+		every axis y label/.style={at=(current axis.above origin),anchor=south},  
+		every axis x label/.style={at=(current axis.right of origin),anchor=west},  
+		]  
+		\addplot [ultra thick, blue, smooth] {abs(x-2)};  
+		\end{axis}  
+		\end{tikzpicture}
+	}
+		\caption{}
+		\label{fig2}
+	%\end{image}
+	%\end{figure*}
+\end{wrapfigure}
 %\begin{figure}[h]
 %	\centering
 %	\begin{tikzpicture}
