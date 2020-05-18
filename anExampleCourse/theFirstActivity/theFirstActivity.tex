@@ -4,6 +4,7 @@
 \usepackage[position=bottom]{caption}
 \theoremstyle{definition}
 \usepackage{tikz}
+\usepackage{wrapfig}
 %\newtheorem{definition}{Definition}[section]
 %\newtheorem{example}{Example}[section]
 \title{The First Activity}  
@@ -34,9 +35,13 @@ Moreover, whenever we talk about functions, we should try to explicitly state wh
 -2&\to -8\\
 1.5&\to 3.375
 \end{align*}
-and so on. This function can be described by the formula \(f(x)= x^3\) or by the plot shown in the Figure below.
+and so on. This function can be described by the formula \(f(x)= x^3\) or by the plot shown in the Figure \ref{fig1}.
 \end{example}
-\begin{image}
+%\begin{image}
+%\begin{figure*}[h]
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\centering
+	\resizebox{0.3\textwidth}{!}{
 	\begin{tikzpicture}  
 	\begin{axis}[  
 	xmin=-2,  
@@ -52,19 +57,24 @@ and so on. This function can be described by the formula \(f(x)= x^3\) or by the
 	\addplot [ultra thick, blue, smooth] {x^3};  
 	\end{axis}  
 	\end{tikzpicture}
-\end{image}
+	}
+	\caption{\small A plot of\(f(x)=x^3\) . Here we can see that
+		for each input (a value on the x-axis), there is exactly one output (a value on the y-axis).}\label{fig1}
+%\end{image}
+%\end{figure*}
+\end{wrapfigure}
 \textbf{Warning} A function is a relation (such that for each input, there is exactly one output) between sets and should not be confused with either its formula or its plot.
 \begin{itemize}
 	\item A formula merely describes the mapping using algebra.
 	\item A plot merely describes the mapping using pictures.
 \end{itemize}
-\begin{figure}[h]
-	\centering
-	\begin{tikzpicture}
-	\draw (0,0)--(2,0)--(2,2)--(0,2)--cycle;
-	\end{tikzpicture}
-	\caption{dfsa}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\begin{tikzpicture}
+%	\draw (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+%	\end{tikzpicture}
+%	\caption{dfsa}
+%\end{figure}
 %\begin{exercise}  
 %  Choose the best place to work on mathematics.  
 %  \begin{multipleChoice}  
