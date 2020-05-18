@@ -1,6 +1,7 @@
 \documentclass{ximera}  
 \usepackage{amsmath,amssymb}
 \usepackage{amsthm}
+\usepackage[position=bottom]{caption}
 \theoremstyle{definition}
 %\newtheorem{definition}{Definition}[section]
 %\newtheorem{example}{Example}[section]
@@ -15,30 +16,57 @@ A function is a relation between sets of objects that can be thought of as a ``m
 \begin{definition}
 	A \textbf{function} is a relation between sets, where for each input, there is \underline{exactly} one output.
 \end{definition}
-Moreover, whenever we talk about functions, we should try to explicitly state what type of things the inputs are and what type of things the outputs are. In calculus, functions often define a relation from (a subset of) the real numbers to (a subset of) the real numbers.
 \begin{remark}
-Something as simple as a dictionary could be thought
-of as a relation, as it connects words to definitions.
-However, a dictionary is not a function, as there
-are words with multiple definitions. On the other
-hand, if each word only had a single definition, then
-it would be a function.
+	Something as simple as a dictionary could be thought
+	of as a relation, as it connects words to definitions.
+	However, a dictionary is not a function, as there
+	are words with multiple definitions. On the other
+	hand, if each word only had a single definition, then
+	it would be a function.
 \end{remark}
-\begin{exercise}  
-  Choose the best place to work on mathematics.  
-  \begin{multipleChoice}  
-    \choice{At the library}  
-    \choice[correct]{At the caf\'e}  
-    \choice{In your office}  
-  \end{multipleChoice}  
-\end{exercise}  
-\begin{question}  
-	Which of the following functions has a graph which is a parabola?  
-	\begin{multipleChoice}  
-		\choice[correct]{$y=x^2+3x-3$}  
-		\choice{$y = \frac{1}{x+2}$}  
-		\choice{$y=3x+1$}  
-	\end{multipleChoice}  
-\end{question} out
+Moreover, whenever we talk about functions, we should try to explicitly state what type of things the inputs are and what type of things the outputs are. In calculus, functions often define a relation from (a subset of) the real numbers to (a subset of) the real numbers.
+\begin{example}
+	Consider the function \(f\) that maps from the real numbers to
+	the real numbers by taking a number and mapping it to its cube:
+\begin{align*}
+1&\to 1\\
+-2&\to -8\\
+1.5&\to 3.375
+\end{align*}
+and so on. This function can be described by the formula \(f(x)= x^3\) or by the plot shown in the Figure below.
+\end{example}
+\begin{image}
+	\begin{tikzpicture}  
+	\begin{axis}[  
+	xmin=-2,  
+	xmax=2,  
+	ymin=-9,  
+	ymax=9,  
+	axis lines=center,  
+	xlabel=$x$,  
+	ylabel=$y$,  
+	every axis y label/.style={at=(current axis.above origin),anchor=south},  
+	every axis x label/.style={at=(current axis.right of origin),anchor=west},  
+	]  
+	\addplot [ultra thick, blue, smooth] {x^3};  
+	\end{axis}  
+	\end{tikzpicture}
+\end{image} 
+%\begin{exercise}  
+%  Choose the best place to work on mathematics.  
+%  \begin{multipleChoice}  
+%    \choice{At the library}  
+%    \choice[correct]{At the caf\'e}  
+%    \choice{In your office}  
+%  \end{multipleChoice}  
+%\end{exercise}  
+%\begin{question}  
+%	Which of the following functions has a graph which is a parabola?  
+%	\begin{multipleChoice}  
+%		\choice[correct]{$y=x^2+3x-3$}  
+%		\choice{$y = \frac{1}{x+2}$}  
+%		\choice{$y=3x+1$}  
+%	\end{multipleChoice}  
+%\end{question} out
 
 \end{document} 
