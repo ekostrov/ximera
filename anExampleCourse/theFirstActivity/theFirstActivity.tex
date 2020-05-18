@@ -3,6 +3,7 @@
 \usepackage{amsthm}
 \usepackage[position=bottom]{caption}
 \theoremstyle{definition}
+\usepackage{tikz}
 %\newtheorem{definition}{Definition}[section]
 %\newtheorem{example}{Example}[section]
 \title{The First Activity}  
@@ -51,7 +52,19 @@ and so on. This function can be described by the formula \(f(x)= x^3\) or by the
 	\addplot [ultra thick, blue, smooth] {x^3};  
 	\end{axis}  
 	\end{tikzpicture}
-\end{image} 
+\end{image}
+\textbf{Warning} A function is a relation (such that for each input, there is exactly one output) between sets and should not be confused with either its formula or its plot.
+\begin{itemize}
+	\item A formula merely describes the mapping using algebra.
+	\item A plot merely describes the mapping using pictures.
+\end{itemize}
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	\draw (0,0)--(2,0)--(2,2)--(0,2)--cycle;
+	\end{tikzpicture}
+	\caption{dfsa}
+\end{figure}
 %\begin{exercise}  
 %  Choose the best place to work on mathematics.  
 %  \begin{multipleChoice}  
